@@ -12,15 +12,27 @@
             <div class="logo-section">
                 <div class="scp-logo">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <!-- SCP Logo Circle -->
-                        <circle cx="50" cy="50" r="45" fill="none" stroke="#ddd" stroke-width="3"/>
-                        <!-- Inner circles -->
+                        <!-- Outer Circle -->
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#ddd" stroke-width="2"/>
+                        
+                        <!-- Inner Circle -->
                         <circle cx="50" cy="50" r="35" fill="none" stroke="#ddd" stroke-width="2"/>
-                        <!-- Arrows pointing inward -->
-                        <path d="M 50 15 L 50 35 M 45 20 L 50 15 L 55 20" stroke="#ddd" stroke-width="2" fill="none"/>
-                        <path d="M 85 50 L 65 50 M 80 45 L 85 50 L 80 55" stroke="#ddd" stroke-width="2" fill="none"/>
-                        <path d="M 50 85 L 50 65 M 45 80 L 50 85 L 55 80" stroke="#ddd" stroke-width="2" fill="none"/>
-                        <path d="M 15 50 L 35 50 M 20 45 L 15 50 L 20 55" stroke="#ddd" stroke-width="2" fill="none"/>
+                        
+                        <!-- Top Arrow pointing down/inward -->
+                        <path d="M 50 2 L 50 28" stroke="#ddd" stroke-width="2.5" fill="none"/>
+                        <path d="M 42 20 L 50 28 L 58 20" stroke="#ddd" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
+                        
+                        <!-- Right Arrow pointing left/inward -->
+                        <path d="M 98 50 L 72 50" stroke="#ddd" stroke-width="2.5" fill="none"/>
+                        <path d="M 80 42 L 72 50 L 80 58" stroke="#ddd" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
+                        
+                        <!-- Bottom Arrow pointing up/inward -->
+                        <path d="M 50 98 L 50 72" stroke="#ddd" stroke-width="2.5" fill="none"/>
+                        <path d="M 42 80 L 50 72 L 58 80" stroke="#ddd" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
+                        
+                        <!-- Left Arrow pointing right/inward -->
+                        <path d="M 2 50 L 28 50" stroke="#ddd" stroke-width="2.5" fill="none"/>
+                        <path d="M 20 42 L 28 50 L 20 58" stroke="#ddd" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
                     </svg>
                 </div>
                 <div class="header-text">
@@ -34,14 +46,26 @@
         </div>
     </header>
 
+    <!-- Warning Modal -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">WARNING: THE FOUNDATION DATABASE IS</p>
+                <p class="modal-classified">CLASSIFIED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">This is a United States Government system. Unauthorized access or use of this system is strictly prohibited and may result in criminal prosecution. All activities on this system are subject to monitoring and recording. By accessing this system, you consent to such monitoring and acknowledge that if monitoring reveals evidence of possible criminal activity, such evidence may be provided to law enforcement officials. This system contains information that has been classified under Executive Order 12958, as amended. Access to this information is limited to persons with appropriate security clearance and a demonstrated need-to-know as defined by the Freedom of Information Act (5 U.S.C. § 552) and Privacy Act (5 U.S.C. § 552a).</p>
+            </div>
+            <button id="acknowledgeBtn" class="acknowledge-btn">I ACKNOWLEDGE</button>
+        </div>
+    </div>
+
     <nav class="navigation">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#scp-series">SCP Series</a></li>
-            <li><a href="#tales">Tales</a></li>
-            <li><a href="#guides">Guides</a></li>
-            <li><a href="#database">Database</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#careers">Careers</a></li>
         </ul>
     </nav>
 
@@ -98,8 +122,32 @@
 
     <footer>
         <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
         <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
     </footer>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('warningModal');
+        const acknowledgeBtn = document.getElementById('acknowledgeBtn');
+
+        // Show modal on page load
+        window.onload = function() {
+            modal.style.display = 'flex';
+        };
+
+        // Close modal when acknowledge button is clicked
+        acknowledgeBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+    </script>
 </body>
 </html>
-
