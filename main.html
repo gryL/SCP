@@ -1,190 +1,81 @@
-/* About Us Page Specific Styles */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>SCP Foundation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #0a0a0a;
-    padding: clamp(30px, 5vw, 50px);
-    border: 2px solid #333;
-}
+    <!-- Warning Modal -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">WARNING: THE FOUNDATION DATABASE IS</p>
+                <p class="modal-classified">CLASSIFIED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">This is an SCP Database system. Unauthorized access or use of this system is strictly prohibited and may result in criminal prosecution. All activities on this system are subject to monitoring and recording. By accessing this system, you consent to such monitoring and acknowledge that if monitoring reveals evidence of possible criminal activity, such evidence may be provided to law enforcement officials. This system contains information that has been classified under Executive Order 12958, as amended. Access to this information is limited to persons with appropriate security clearance and a demonstrated need-to-know as defined by the Freedom of Information Act (5 U.S.C. § 552) and Privacy Act (5 U.S.C. § 552a).</p>
+            </div>
+            <button id="acknowledgeBtn" class="acknowledge-btn">CONFIRM</button>
+        </div>
+    </div>
 
-.page-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 3px solid #8b0000;
-}
+    <nav class="navigation">
+        <ul>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
 
-.page-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: #ddd;
-    margin: 0 0 20px 0;
-    letter-spacing: 4px;
-    font-weight: bold;
-}
+    <main class="content">
+        <!-- Content area ready for future additions -->
+    </main>
 
-.office-subtitle {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    color: #aaa;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+    <footer>
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
 
-.revision-note {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.75rem, 1.8vw, 0.85rem);
-    color: #666;
-    font-style: italic;
-}
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('warningModal');
+        const acknowledgeBtn = document.getElementById('acknowledgeBtn');
 
-.content-section {
-    line-height: 1.9;
-}
+        // Show modal on page load
+        window.onload = function() {
+            modal.style.display = 'flex';
+        };
 
-.intro-paragraph,
-.standard-paragraph,
-.mission-intro {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    color: #ccc;
-    margin-bottom: 25px;
-    text-align: justify;
-}
-
-.mission-intro {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Core Principles Section */
-.principles-section {
-    margin: 30px 0;
-    padding: 30px 0;
-    border-top: 2px solid #444;
-    border-bottom: 2px solid #444;
-}
-
-.principle-item {
-    margin-bottom: 25px;
-    padding-left: 30px;
-    position: relative;
-}
-
-.principle-item:last-child {
-    margin-bottom: 0;
-}
-
-.principle-item::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: #8b0000;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.principle-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-    color: #ff6666;
-    font-weight: bold;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.principle-description {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.85rem, 2vw, 0.95rem);
-    color: #aaa;
-    line-height: 1.7;
-    padding-left: 0;
-}
-
-/* Approval Notice */
-.approval-notice {
-    margin-top: 40px;
-    padding: 25px;
-    background-color: #0f0f0f;
-    border: 2px solid #666;
-    border-left: 5px solid #00ff00;
-    text-align: center;
-}
-
-.approval-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    color: #00ff00;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
-}
-
-.clearance-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
-    color: #ffaa00;
-    margin: 0;
-    font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 25px 20px;
-    }
-
-    .principle-item {
-        padding-left: 20px;
-    }
-
-    .intro-paragraph,
-    .standard-paragraph,
-    .mission-intro {
-        text-align: left;
-    }
-}
-
-@media print {
-    body {
-        background-color: #fff;
-        color: #000;
-    }
-
-    .about-container {
-        background-color: #fff;
-        border: none;
-    }
-
-    .page-title,
-    .principle-title {
-        color: #000;
-    }
-
-    .office-subtitle,
-    .intro-paragraph,
-    .standard-paragraph,
-    .mission-intro,
-    .principle-description {
-        color: #000;
-    }
-
-    .revision-note {
-        color: #333;
-    }
-
-    .approval-notice {
-        background-color: #f5f5f5;
-        border-color: #000;
-    }
-
-    .approval-text {
-        color: #000;
-    }
-
-    .clearance-text {
-        color: #333;
-    }
-}
+        // Close modal when acknowledge button is clicked
+        acknowledgeBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
