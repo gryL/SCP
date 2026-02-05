@@ -1,0 +1,161 @@
+/* News Page Specific Styles */
+
+.news-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #0a0a0a;
+    padding: clamp(30px, 5vw, 50px);
+    border: 2px solid #333;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #8b0000;
+}
+
+.page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #ddd;
+    margin: 0 0 20px 0;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.office-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    color: #aaa;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.revision-note {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+    color: #666;
+    font-style: italic;
+}
+
+/* News Articles */
+.news-article {
+    margin-bottom: 40px;
+}
+
+.news-headline {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: #ff6666;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.news-body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.news-body p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.news-body p:last-child {
+    margin-bottom: 0;
+}
+
+.emphasis-text {
+    color: #aaa !important;
+    font-style: italic;
+    margin-top: 20px !important;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+/* Article Divider */
+.article-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #444, transparent);
+    margin: 40px 0;
+}
+
+/* Notice Footer */
+.notice-footer {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #0f0f0f;
+    border: 2px solid #666;
+    border-left: 5px solid #ffaa00;
+}
+
+.notice-footer p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-container {
+        padding: 25px 20px;
+    }
+
+    .news-body p {
+        text-align: left;
+    }
+
+    .notice-footer p {
+        text-align: left;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .news-container {
+        background-color: #fff;
+        border: none;
+    }
+
+    .page-title,
+    .news-headline {
+        color: #000;
+    }
+
+    .office-subtitle,
+    .news-body p {
+        color: #000;
+    }
+
+    .revision-note,
+    .emphasis-text {
+        color: #333 !important;
+    }
+
+    .article-divider {
+        background: linear-gradient(to right, transparent, #000, transparent);
+    }
+
+    .notice-footer {
+        background-color: #f5f5f5;
+        border-color: #000;
+    }
+
+    .notice-footer p {
+        color: #000;
+    }
+}
+
