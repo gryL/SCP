@@ -252,6 +252,20 @@ body {
     gap: 20px;
 }
 
+.header-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: opacity 0.3s;
+}
+
+.header-link:hover {
+    opacity: 0.8;
+}
+
+
 .scp-logo {
     width: clamp(60px, 10vw, 80px);
     height: clamp(60px, 10vw, 80px);
