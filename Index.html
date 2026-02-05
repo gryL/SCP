@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Foundation - Loading</title>
+    <link rel="stylesheet" href="splash.css">
+</head>
+<body>
+    <div class="splash-container">
+        <video id="splashVideo" autoplay muted>
+            <source src="SCP_Splash.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        const video = document.getElementById('splashVideo');
+        
+        // Redirect to main page after video ends
+        video.addEventListener('ended', function() {
+            window.location.href = 'main.html';
+        });
+
+        // Fallback: redirect after 7 seconds if video doesn't play
+        setTimeout(function() {
+            window.location.href = 'main.html';
+        }, 7000);
+    </script>
+</body>
+</html>
