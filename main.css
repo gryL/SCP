@@ -107,6 +107,61 @@ body {
     transform: scale(1.05);
 }
 
+/* Login Modal Styles */
+.login-modal-content {
+    max-width: 600px;
+}
+
+.login-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+    color: #aaa;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+.login-field label {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+    color: #aaa;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.login-field input {
+    width: 100%;
+    background-color: #000;
+    border: 2px solid #444;
+    color: #0f0;
+    padding: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    letter-spacing: 0.5px;
+    transition: border-color 0.3s;
+}
+
+.login-field input:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+.login-field input::placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+
 /* Mobile adjustments for modal */
 @media (max-width: 768px) {
     .modal {
@@ -163,10 +218,32 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: clamp(15px, 3vw, 20px) clamp(20px, 4vw, 30px);
     gap: 20px;
+}
+
+.user-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.user-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.username-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    color: #00ff00;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 .logo-section {
