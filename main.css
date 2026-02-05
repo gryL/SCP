@@ -251,6 +251,12 @@ body {
     color: #fff;
 }
 
+.navigation a.active {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-bottom: 3px solid #8b0000;
+}
+
 /* Main Content */
 .content {
     flex: 1;
