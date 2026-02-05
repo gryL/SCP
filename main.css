@@ -448,6 +448,29 @@ footer p {
     .footer-links .separator {
         display: none;
     }
+
+    .user-display {
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navigation ul {
+        flex-wrap: wrap;
+    }
+
+    .navigation li {
+        flex: 1 1 calc(50% - 1px);
+        border-bottom: 1px solid #444;
+    }
+
+    .navigation a {
+        border-right: 1px solid #444;
+    }
+
+    .navigation li:nth-child(even) a {
+        border-right: none;
+    }
 }
 
 @media (max-width: 480px) {
