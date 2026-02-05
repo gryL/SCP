@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form PF-19-A (REV. 4) - Personnel File Application</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="main.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <!-- Form Header -->
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 3 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM PF-19-A (REV. 4)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>SCP FOUNDATION PERSONNEL APPLICATION</h1>
+                    <p class="doc-subtitle">CLASSIFIED PERSONNEL INTAKE FORM</p>
+                </div>
+                <div class="stamp-area">
+                    <div class="stamp received-stamp">RECEIVED</div>
+                    <div class="stamp processing-stamp">PROCESSING</div>
+                </div>
+            </div>
+
+            <!-- Personnel ID Section (only visible in print) -->
+            <div class="print-only personnel-id-block">
+                <strong>PERSONNEL ID:</strong> FL-3-7721-GL<br>
+                <strong>CLEARANCE REQUESTED:</strong> LEVEL 3 (RESTRICTED)
+            </div>
+
+            <!-- Section 1: Personal Information -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">PERSONAL INFORMATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="full-name">FULL LEGAL NAME</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Last, First Middle">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="dob">DATE OF BIRTH</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="ssn">SSN / NATIONAL ID</label>
+                        <input type="text" id="ssn" name="ssn" placeholder="███-██-████">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="address">CURRENT ADDRESS</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="phone">CONTACT NUMBER</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="position-number">POSITION NUMBER REQUESTED</label>
+                        <input type="text" id="position-number" name="position-number" placeholder="e.g., SITE-19-RF-2025-003">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Education -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">EDUCATIONAL BACKGROUND</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="highest-degree">HIGHEST DEGREE OBTAINED</label>
+                        <select id="highest-degree" name="highest-degree">
+                            <option value="">-- SELECT --</option>
+                            <option value="high-school">High School / GED</option>
+                            <option value="associate">Associate Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="doctorate">Doctorate / PhD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field two-thirds-width">
+                        <label for="institution">INSTITUTION NAME</label>
+                        <input type="text" id="institution" name="institution">
+                    </div>
+                    <div class="form-field one-third-width">
+                        <label for="grad-year">YEAR COMPLETED</label>
+                        <input type="text" id="grad-year" name="grad-year" placeholder="YYYY">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="major">MAJOR / FIELD OF STUDY</label>
+                        <input type="text" id="major" name="major">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="certifications">RELEVANT CERTIFICATIONS OR LICENSES</label>
+                        <textarea id="certifications" name="certifications" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Work History -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">EMPLOYMENT HISTORY</span>
+                </div>
+                <div class="subsection-title">CURRENT OR MOST RECENT POSITION</div>
+                <div class="form-row">
+                    <div class="form-field two-thirds-width">
+                        <label for="employer-1">EMPLOYER / ORGANIZATION</label>
+                        <input type="text" id="employer-1" name="employer-1">
+                    </div>
+                    <div class="form-field one-third-width">
+                        <label for="duration-1">DURATION</label>
+                        <input type="text" id="duration-1" name="duration-1" placeholder="MM/YYYY - MM/YYYY">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="position-1">POSITION TITLE</label>
+                        <input type="text" id="position-1" name="position-1">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="duties-1">PRIMARY DUTIES AND RESPONSIBILITIES</label>
+                        <textarea id="duties-1" name="duties-1" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="subsection-title">PREVIOUS POSITION</div>
+                <div class="form-row">
+                    <div class="form-field two-thirds-width">
+                        <label for="employer-2">EMPLOYER / ORGANIZATION</label>
+                        <input type="text" id="employer-2" name="employer-2">
+                    </div>
+                    <div class="form-field one-third-width">
+                        <label for="duration-2">DURATION</label>
+                        <input type="text" id="duration-2" name="duration-2" placeholder="MM/YYYY - MM/YYYY">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="position-2">POSITION TITLE</label>
+                        <input type="text" id="position-2" name="position-2">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="duties-2">PRIMARY DUTIES AND RESPONSIBILITIES</label>
+                        <textarea id="duties-2" name="duties-2" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Technical Skills -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">TECHNICAL COMPETENCIES</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="skills">PRIMARY TECHNICAL SKILLS (CHECK ALL THAT APPLY)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="skills" value="rf-systems"> RF SYSTEMS</label>
+                            <label><input type="checkbox" name="skills" value="signal-analysis"> SIGNAL ANALYSIS</label>
+                            <label><input type="checkbox" name="skills" value="electronics"> FIELD-GRADE ELECTRONICS</label>
+                            <label><input type="checkbox" name="skills" value="software"> SOFTWARE SYSTEMS</label>
+                            <label><input type="checkbox" name="skills" value="diagnostics"> RAPID TECHNICAL DIAGNOSTICS</label>
+                            <label><input type="checkbox" name="skills" value="integration"> MULTI-DISCIPLINARY SYSTEMS INTEGRATION</label>
+                            <label><input type="checkbox" name="skills" value="other"> OTHER (SPECIFY BELOW)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="additional-skills">ADDITIONAL RELEVANT SKILLS OR SPECIALIZATIONS</label>
+                        <textarea id="additional-skills" name="additional-skills" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Security & Background -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">SECURITY CLEARANCE & BACKGROUND</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="current-clearance">CURRENT OR PRIOR SECURITY CLEARANCE</label>
+                        <input type="text" id="current-clearance" name="current-clearance" placeholder="e.g., DoD SECRET, NATO COSMIC TOP SECRET, or NONE">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>HAVE YOU EVER BEEN INVESTIGATED FOR A SECURITY VIOLATION?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="violation" value="yes"> YES</label>
+                            <label><input type="radio" name="violation" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>HAVE YOU EVER EXPERIENCED UNEXPLAINED MEMORY LOSS?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="memory-loss" value="yes"> YES</label>
+                            <label><input type="radio" name="memory-loss" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Print-only sections -->
+            <div class="print-only">
+                <!-- Psychological Screening -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 2</span>
+                        <span class="section-title">PSYCHOLOGICAL SCREENING</span>
+                    </div>
+                    <div class="assessment-grid">
+                        <div class="assessment-item">
+                            <strong>BASELINE STABILITY:</strong> WITHIN ACCEPTABLE PARAMETERS
+                        </div>
+                        <div class="assessment-item">
+                            <strong>RESILIENCE INDEX:</strong> 8.7
+                        </div>
+                        <div class="assessment-item">
+                            <strong>ANOMALOUS STRESS RESPONSE:</strong> NON-CRITICAL
+                        </div>
+                        <div class="assessment-item">
+                            <strong>NOTES:</strong> Candidate demonstrates high adaptability and technical precision.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Assessment -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 3</span>
+                        <span class="section-title">SKILL ASSESSMENT</span>
+                    </div>
+                    <div class="subsection-title">PRIMARY COMPETENCIES</div>
+                    <ul class="competency-list">
+                        <li>RF SYSTEMS</li>
+                        <li>SIGNAL ANALYSIS</li>
+                        <li>FIELD-GRADE ELECTRONICS</li>
+                        <li>SOFTWARE SYSTEMS</li>
+                        <li>RAPID TECHNICAL DIAGNOSTICS</li>
+                        <li>MULTI-DISCIPLINARY SYSTEMS INTEGRATION</li>
+                    </ul>
+                    <div class="subsection-title">OPERATIONAL SUITABILITY</div>
+                    <div class="assessment-grid">
+                        <div class="assessment-item">
+                            <strong>FIELD RESEARCH:</strong> APPROVED
+                        </div>
+                        <div class="assessment-item">
+                            <strong>CONTAINMENT SUPPORT:</strong> CONDITIONAL
+                        </div>
+                        <div class="assessment-item">
+                            <strong>CROSS-SITE DEPLOYMENT:</strong> APPROVED
+                        </div>
+                        <div class="assessment-item">
+                            <strong>MEMETIC HAZARD EXPOSURE:</strong> LIMITED
+                        </div>
+                        <div class="assessment-item">
+                            <strong>NOTES:</strong> Candidate demonstrates above-average cross-disciplinary capability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Review Notes -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 4</span>
+                        <span class="section-title">INTERNAL REVIEW NOTES</span>
+                    </div>
+                    <div class="review-note">
+                        <div class="reviewer-title">Reviewer 1 (Site-19 Personnel Division):</div>
+                        <blockquote>"Candidate exhibits strong technical breadth and long-term operational discipline. Suitable for Level 3 field research assignments with minimal supervision."</blockquote>
+                    </div>
+                    <div class="review-note">
+                        <div class="reviewer-title">Reviewer 2 (Security Clearance Board):</div>
+                        <blockquote>"Recommend assignment to RF-sensitive anomaly investigations. Prior ASOS experience is directly applicable."</blockquote>
+                    </div>
+                    <div class="review-note">
+                        <div class="reviewer-title">Reviewer 3 (Redacted):</div>
+                        <blockquote>"<span class="redacted">[REDACTED]</span> due to incident ██-███. No further action required."</blockquote>
+                    </div>
+                </div>
+
+                <!-- Clearance Decision -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 5</span>
+                        <span class="section-title">CLEARANCE DECISION</span>
+                    </div>
+                    <div class="decision-block">
+                        <div class="decision-item"><strong>Clearance Level Granted:</strong> LEVEL 3</div>
+                    </div>
+                    <div class="subsection-title">ACCESS SCOPE</div>
+                    <ul class="access-list">
+                        <li>FIELD RESEARCH OPERATIONS</li>
+                        <li>TECHNICAL ANALYSIS LABS</li>
+                        <li>LIMITED CONTAINMENT SUPPORT</li>
+                        <li>RESTRICTED ARCHIVE ACCESS (TIER C)</li>
+                    </ul>
+                    <div class="subsection-title">RESTRICTIONS</div>
+                    <ul class="restriction-list">
+                        <li>NO ACCESS TO MEMETIC K-CLASS MATERIAL</li>
+                        <li>NO ACCESS TO SCP-███, SCP-███, OR SCP-5000 SERIES FILES</li>
+                        <li>TRAVEL LIMITATIONS APPLY DURING ACTIVE EVENTS</li>
+                    </ul>
+                    <div class="final-status">
+                        <strong>Final Status:</strong> <span class="status-accepted">ACCEPTED — ACTIVE PERSONNEL</span>
+                    </div>
+                </div>
+
+                <!-- Onboarding Notice -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 6</span>
+                        <span class="section-title">ONBOARDING NOTICE</span>
+                    </div>
+                    <div class="notice-box">
+                        <p><strong>Welcome to the SCP Foundation, Researcher Langley.</strong></p>
+                        <p>You are hereby assigned to <strong>Site-19 Field Research Division, RF-Sensitive Anomalies Group.</strong></p>
+                        <p>Report to Dr. H. Kessler for initial briefing within 48 hours of receipt of this document.</p>
+                        <p class="warning-text">Failure to report will result in administrative review under Protocol 12-B.</p>
+                    </div>
+                </div>
+
+                <!-- Signatures -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">SECTION 7</span>
+                        <span class="section-title">SIGNATURES</span>
+                    </div>
+                    <div class="signature-block">
+                        <div class="signature-line">
+                            <strong>Applicant Signature:</strong><br>
+                            LANGLEY, GARY L. — Digitally Recorded
+                        </div>
+                        <div class="signature-line">
+                            <strong>Review Officer:</strong><br>
+                            CAPT. ████████, SITE-19 PERSONNEL COMMAND
+                        </div>
+                        <div class="signature-line">
+                            <strong>Security Board Authorization:</strong><br>
+                            <div class="approval-stamp">LEVEL 3 CLEARANCE APPROVED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applicant Acknowledgment (visible on screen) -->
+            <div class="form-section no-print">
+                <div class="section-header">
+                    <span class="section-number">SECTION 6</span>
+                    <span class="section-title">APPLICANT ACKNOWLEDGMENT</span>
+                </div>
+                <div class="acknowledgment-box">
+                    <p>I certify that all information provided in this application is true and complete to the best of my knowledge. I understand that falsification of information may result in immediate termination and possible legal action.</p>
+                    <p>I acknowledge that employment with the SCP Foundation requires adherence to strict confidentiality protocols and that violation of these protocols may result in Class-A amnestic treatment and/or termination.</p>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="acknowledge" name="acknowledge">
+                        I ACKNOWLEDGE AND AGREE TO THE ABOVE TERMS
+                    </label>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" onclick="window.print()">PRINT / SAVE AS PDF</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+</body>
+</html>
+
