@@ -18,6 +18,10 @@
                     <p class="tagline">Secure, Contain, Protect</p>
                 </div>
             </div>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
         </div>
     </header>
 
@@ -32,6 +36,41 @@
                 <p class="foia-text">This is an SCP Database system. Unauthorized access or use of this system is strictly prohibited and may result in criminal prosecution. All activities on this system are subject to monitoring and recording. By accessing this system, you consent to such monitoring and acknowledge that if monitoring reveals evidence of possible criminal activity, such evidence may be provided to law enforcement officials. This system contains information that has been classified under Executive Order 12958, as amended. Access to this information is limited to persons with appropriate security clearance and a demonstrated need-to-know as defined by the Freedom of Information Act (5 U.S.C. § 552) and Privacy Act (5 U.S.C. § 552a).</p>
             </div>
             <button id="acknowledgeBtn" class="acknowledge-btn">CONFIRM</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content login-modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">SECURE ACCESS TERMINAL</p>
+                <p class="login-subtitle">FOUNDATION DATABASE — AUTHORIZED PERSONNEL ONLY</p>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" class="login-form">
+                    <div class="login-field">
+                        <label for="username">USERNAME</label>
+                        <input type="text" id="username" name="username" required autocomplete="off">
+                    </div>
+                    <div class="login-field">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required autocomplete="off">
+                    </div>
+                    <div class="login-field">
+                        <label for="siteId">SITE ID</label>
+                        <input type="text" id="siteId" name="siteId" required placeholder="e.g., SITE-19" autocomplete="off">
+                    </div>
+                    <div class="login-field">
+                        <label for="areaProgram">AREA / PROGRAM</label>
+                        <input type="text" id="areaProgram" name="areaProgram" required placeholder="e.g., RESEARCH-A" autocomplete="off">
+                    </div>
+                    <div class="login-field">
+                        <label for="terminalId">TERMINAL ID</label>
+                        <input type="text" id="terminalId" name="terminalId" required placeholder="e.g., TERM-447-B" autocomplete="off">
+                    </div>
+                    <button type="submit" class="acknowledge-btn">ACCESS SYSTEM</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -64,17 +103,49 @@
 
     <script>
         // Modal functionality
-        const modal = document.getElementById('warningModal');
+        const warningModal = document.getElementById('warningModal');
+        const loginModal = document.getElementById('loginModal');
         const acknowledgeBtn = document.getElementById('acknowledgeBtn');
+        const loginForm = document.getElementById('loginForm');
+        const userDisplay = document.getElementById('userDisplay');
+        const usernameDisplay = document.getElementById('usernameDisplay');
 
-        // Show modal on page load
+        // Check if user is already logged in
+        const storedUsername = sessionStorage.getItem('scpUsername');
+        
         window.onload = function() {
-            modal.style.display = 'flex';
+            if (storedUsername) {
+                // User already logged in, show username
+                usernameDisplay.textContent = storedUsername;
+                userDisplay.style.display = 'block';
+            } else {
+                // Show warning modal first
+                warningModal.style.display = 'flex';
+            }
         };
 
-        // Close modal when acknowledge button is clicked
+        // Close warning modal and show login modal
         acknowledgeBtn.onclick = function() {
-            modal.style.display = 'none';
+            warningModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        };
+
+        // Handle login form submission
+        loginForm.onsubmit = function(e) {
+            e.preventDefault();
+            
+            // Get username value
+            const username = document.getElementById('username').value;
+            
+            // Store username in session storage
+            sessionStorage.setItem('scpUsername', username);
+            
+            // Display username
+            usernameDisplay.textContent = username;
+            userDisplay.style.display = 'block';
+            
+            // Close login modal
+            loginModal.style.display = 'none';
         };
     </script>
 </body>
