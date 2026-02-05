@@ -1,16 +1,25 @@
 // Shared user authentication display
 (function() {
-    // Check if user is logged in
-    const storedUsername = sessionStorage.getItem('scpUsername');
+    // Wait for DOM to be fully loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', displayUsername);
+    } else {
+        displayUsername();
+    }
     
-    if (storedUsername) {
-        // Find user display elements
-        const userDisplay = document.getElementById('userDisplay');
-        const usernameDisplay = document.getElementById('usernameDisplay');
+    function displayUsername() {
+        // Check if user is logged in
+        const storedUsername = sessionStorage.getItem('scpUsername');
         
-        if (userDisplay && usernameDisplay) {
-            usernameDisplay.textContent = storedUsername;
-            userDisplay.style.display = 'block';
+        if (storedUsername) {
+            // Find user display elements
+            const userDisplay = document.getElementById('userDisplay');
+            const usernameDisplay = document.getElementById('usernameDisplay');
+            
+            if (userDisplay && usernameDisplay) {
+                usernameDisplay.textContent = storedUsername;
+                userDisplay.style.display = 'block';
+            }
         }
     }
 })();
