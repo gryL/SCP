@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form IR-108 (REV. 7) - Incident Report</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <!-- Form Header -->
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 2 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM IR-108 (REV. 7)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>INCIDENT REPORT FORM</h1>
+                    <p class="doc-subtitle">OPERATIONAL DOCUMENTATION — IMMEDIATE FILING REQUIRED</p>
+                </div>
+            </div>
+
+            <!-- Section 1: Incident Details -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">INCIDENT IDENTIFICATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="incident-date">INCIDENT DATE</label>
+                        <input type="date" id="incident-date" name="incident-date" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="incident-time">INCIDENT TIME (24HR)</label>
+                        <input type="time" id="incident-time" name="incident-time" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="incident-location">LOCATION / SITE</label>
+                        <input type="text" id="incident-location" name="incident-location" required placeholder="e.g., SITE-19, SECTOR-C, LAB-447">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="incident-type">INCIDENT TYPE</label>
+                        <select id="incident-type" name="incident-type" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="containment-breach">CONTAINMENT BREACH</option>
+                            <option value="personnel-injury">PERSONNEL INJURY</option>
+                            <option value="equipment-malfunction">EQUIPMENT MALFUNCTION</option>
+                            <option value="security-violation">SECURITY VIOLATION</option>
+                            <option value="anomalous-behavior">ANOMALOUS BEHAVIOR</option>
+                            <option value="protocol-deviation">PROTOCOL DEVIATION</option>
+                            <option value="other">OTHER</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Personnel Involved -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">PERSONNEL INVOLVED</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="reporting-personnel">REPORTING PERSONNEL ID</label>
+                        <input type="text" id="reporting-personnel" name="reporting-personnel" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="affected-personnel">AFFECTED PERSONNEL (IF ANY)</label>
+                        <textarea id="affected-personnel" name="affected-personnel" rows="3" placeholder="List personnel IDs separated by commas"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="witnesses">WITNESSES</label>
+                        <textarea id="witnesses" name="witnesses" rows="3" placeholder="List witness personnel IDs"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Incident Description -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">INCIDENT DESCRIPTION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="incident-description">DETAILED DESCRIPTION</label>
+                        <textarea id="incident-description" name="incident-description" rows="8" required placeholder="Provide comprehensive description of events"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>
+                            <input type="checkbox" id="auto-redact" name="auto-redact">
+                            ENABLE AUTOMATIC KEYWORD REDACTION (SCP designations, personnel names, classified terms)
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Response Actions -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">IMMEDIATE RESPONSE ACTIONS TAKEN</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="response-actions">ACTIONS TAKEN</label>
+                        <textarea id="response-actions" name="response-actions" rows="6" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>MEDICAL ASSISTANCE REQUIRED?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="medical-required" value="yes"> YES</label>
+                            <label><input type="radio" name="medical-required" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Assessment -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">SEVERITY ASSESSMENT</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="severity">INCIDENT SEVERITY LEVEL</label>
+                        <select id="severity" name="severity" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="minor">MINOR (No containment compromise)</option>
+                            <option value="moderate">MODERATE (Limited exposure/damage)</option>
+                            <option value="major">MAJOR (Containment breach/significant exposure)</option>
+                            <option value="critical">CRITICAL (Site-wide threat)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>FURTHER INVESTIGATION REQUIRED?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="investigation" value="yes"> YES</label>
+                            <label><input type="radio" name="investigation" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" id="submitIncident">SUBMIT REPORT</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Submission Modal -->
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">INCIDENT REPORT SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your incident report has been successfully submitted to Site Security Division for immediate review.</p>
+                <p class="foia-text" style="margin-top: 20px;">Report Reference: IR-108-████-<span id="reportRef"></span></p>
+            </div>
+            <button id="closeModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script>
+        const submitBtn = document.getElementById('submitIncident');
+        const modal = document.getElementById('submissionModal');
+        const closeBtn = document.getElementById('closeModal');
+        const autoRedact = document.getElementById('auto-redact');
+        const description = document.getElementById('incident-description');
+
+        // Auto-redaction functionality
+        autoRedact.addEventListener('change', function() {
+            if (this.checked && description.value) {
+                let text = description.value;
+                // Redact SCP designations
+                text = text.replace(/SCP-\d+/gi, 'SCP-███');
+                // Redact common classified terms
+                text = text.replace(/\b(keter|euclid|thaumiel|apollyon)\b/gi, '████');
+                // Redact potential names (capitalized words)
+                text = text.replace(/\b[A-Z][a-z]+ [A-Z][a-z]+\b/g, '████ ████');
+                description.value = text;
+            }
+        });
+
+        submitBtn.onclick = function() {
+            const refNum = Date.now().toString().slice(-6);
+            document.getElementById('reportRef').textContent = refNum;
+            modal.style.display = 'flex';
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
+</body>
+</html>
