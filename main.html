@@ -136,8 +136,19 @@
         loginForm.onsubmit = function(e) {
             e.preventDefault();
             
-            // Get username value
+            // Get form values
             const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Count uppercase letters and special characters in password
+            const uppercaseCount = (password.match(/[A-Z]/g) || []).length;
+            const specialCharCount = (password.match(/[^a-zA-Z0-9]/g) || []).length;
+            
+            // Check if password has more than 2 uppercase and more than 2 special characters
+            if (uppercaseCount > 2 && specialCharCount > 2) {
+                alert('AUTHENTICATION FAILED: Invalid password format. Access denied.');
+                return false;
+            }
             
             // Store username in session storage
             sessionStorage.setItem('scpUsername', username);
