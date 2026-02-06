@@ -605,16 +605,53 @@
     margin-top: 10px;
 }
 
+/* Circular Approval Stamp */
+.circular-approval-stamp {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
 .circular-approval-stamp svg {
     width: 100%;
     height: 100%;
     transform: rotate(-5deg);
 }
 
+/* Circular stamps in header */
+.circular-stamp {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.circular-stamp svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-8deg);
+}
+
 @media print {
-    .circular-approval-stamp svg circle,
+    .circular-approval-stamp svg circle {
+        stroke: #000 !important;
+        fill: none !important;
+    }
+    
     .circular-approval-stamp svg text {
-        stroke: #000;
-        fill: #000;
+        fill: #000 !important;
+    }
+    
+    .circular-approval-stamp svg path {
+        stroke: none !important;
+    }
+    
+    .circular-stamp svg circle {
+        stroke: #000 !important;
+        fill: none !important;
+    }
+    
+    .circular-stamp svg text {
+        fill: #000 !important;
     }
 }
