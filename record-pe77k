@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Personnel Record - Form PE-77-K</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <!-- Form Header -->
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 1 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM PE-77-K (REV. 12) — COMPLETED</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>PSYCHOLOGICAL EVALUATION</h1>
+                    <p class="doc-subtitle">BASELINE COGNITIVE ASSESSMENT — COMPLETED</p>
+                </div>
+                <div class="stamp-area">
+                    <div class="stamp received-stamp">CLEARED</div>
+                    <div class="stamp processing-stamp">FILED</div>
+                </div>
+            </div>
+
+            <!-- Personnel ID Section -->
+            <div class="personnel-id-block">
+                <strong>PERSONNEL ID:</strong> FL-3-7721-GL<br>
+                <strong>CLEARANCE LEVEL:</strong> LEVEL 3 (RESTRICTED)<br>
+                <strong>EVALUATION DATE:</strong> JANUARY 2025<br>
+                <strong>EVALUATOR:</strong> DR. ████████, FOUNDATION PSYCH DIVISION
+            </div>
+
+            <!-- Section 1: Initial Assessment from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">INITIAL PSYCHOLOGICAL SCREENING</span>
+                </div>
+                <div class="assessment-grid">
+                    <div class="assessment-item">
+                        <strong>BASELINE STABILITY:</strong> WITHIN ACCEPTABLE PARAMETERS
+                    </div>
+                    <div class="assessment-item">
+                        <strong>RESILIENCE INDEX:</strong> 8.7
+                    </div>
+                    <div class="assessment-item">
+                        <strong>ANOMALOUS STRESS RESPONSE:</strong> NON-CRITICAL
+                    </div>
+                    <div class="assessment-item">
+                        <strong>NOTES:</strong> Candidate demonstrates high adaptability and technical precision.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Skill Assessment from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">SKILL ASSESSMENT</span>
+                </div>
+                <div class="subsection-title">PRIMARY COMPETENCIES</div>
+                <ul class="competency-list">
+                    <li>RF SYSTEMS</li>
+                    <li>SIGNAL ANALYSIS</li>
+                    <li>FIELD-GRADE ELECTRONICS</li>
+                    <li>SOFTWARE SYSTEMS</li>
+                    <li>RAPID TECHNICAL DIAGNOSTICS</li>
+                    <li>MULTI-DISCIPLINARY SYSTEMS INTEGRATION</li>
+                </ul>
+                <div class="subsection-title">OPERATIONAL SUITABILITY</div>
+                <div class="assessment-grid">
+                    <div class="assessment-item">
+                        <strong>FIELD RESEARCH:</strong> APPROVED
+                    </div>
+                    <div class="assessment-item">
+                        <strong>CONTAINMENT SUPPORT:</strong> CONDITIONAL
+                    </div>
+                    <div class="assessment-item">
+                        <strong>CROSS-SITE DEPLOYMENT:</strong> APPROVED
+                    </div>
+                    <div class="assessment-item">
+                        <strong>MEMETIC HAZARD EXPOSURE:</strong> LIMITED
+                    </div>
+                    <div class="assessment-item">
+                        <strong>NOTES:</strong> Candidate demonstrates above-average cross-disciplinary capability.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Internal Review Notes from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">INTERNAL REVIEW NOTES</span>
+                </div>
+                <div class="review-note">
+                    <div class="reviewer-title">Reviewer 1 (Site-19 Personnel Division):</div>
+                    <blockquote>"Candidate exhibits strong technical breadth and long-term operational discipline. Suitable for Level 3 field research assignments with minimal supervision."</blockquote>
+                </div>
+                <div class="review-note">
+                    <div class="reviewer-title">Reviewer 2 (Security Clearance Board):</div>
+                    <blockquote>"Recommend assignment to RF-sensitive anomaly investigations. Prior ASOS experience is directly applicable."</blockquote>
+                </div>
+                <div class="review-note">
+                    <div class="reviewer-title">Reviewer 3 (Redacted):</div>
+                    <blockquote>"<span class="redacted">[REDACTED]</span> due to incident ██-███. No further action required."</blockquote>
+                </div>
+            </div>
+
+            <!-- Section 4: Clearance Decision from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">CLEARANCE DECISION</span>
+                </div>
+                <div class="decision-block">
+                    <div class="decision-item"><strong>Clearance Level Granted:</strong> LEVEL 3</div>
+                </div>
+                <div class="subsection-title">ACCESS SCOPE</div>
+                <ul class="access-list">
+                    <li>FIELD RESEARCH OPERATIONS</li>
+                    <li>TECHNICAL ANALYSIS LABS</li>
+                    <li>LIMITED CONTAINMENT SUPPORT</li>
+                    <li>RESTRICTED ARCHIVE ACCESS (TIER C)</li>
+                </ul>
+                <div class="subsection-title">RESTRICTIONS</div>
+                <ul class="restriction-list">
+                    <li>NO ACCESS TO MEMETIC K-CLASS MATERIAL</li>
+                    <li>NO ACCESS TO SCP-███, SCP-███, OR SCP-5000 SERIES FILES</li>
+                    <li>TRAVEL LIMITATIONS APPLY DURING ACTIVE EVENTS</li>
+                </ul>
+                <div class="final-status">
+                    <strong>Final Status:</strong> <span class="status-accepted">ACCEPTED — ACTIVE PERSONNEL</span>
+                </div>
+            </div>
+
+            <!-- Section 5: Onboarding Notice from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">ONBOARDING NOTICE</span>
+                </div>
+                <div class="notice-box">
+                    <p><strong>Welcome to the SCP Foundation, Researcher Langley.</strong></p>
+                    <p>You are hereby assigned to <strong>Site-19 Field Research Division, RF-Sensitive Anomalies Group.</strong></p>
+                    <p>Report to Dr. H. Kessler for initial briefing within 48 hours of receipt of this document.</p>
+                    <p class="warning-text">Failure to report will result in administrative review under Protocol 12-B.</p>
+                </div>
+            </div>
+
+            <!-- Section 6: Signatures from PF-19-A -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 6</span>
+                    <span class="section-title">SIGNATURES</span>
+                </div>
+                <div class="signature-block">
+                    <div class="signature-line">
+                        <strong>Applicant Signature:</strong><br>
+                        LANGLEY, GARY L. — Digitally Recorded
+                    </div>
+                    <div class="signature-line">
+                        <strong>Review Officer:</strong><br>
+                        CAPT. ████████, SITE-19 PERSONNEL COMMAND
+                    </div>
+                    <div class="signature-line">
+                        <strong>Security Board Authorization:</strong><br>
+                        <div class="approval-stamp">LEVEL 3 CLEARANCE APPROVED</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" onclick="window.print()">PRINT RECORD</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='personal-records.html'">RETURN TO RECORDS</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+</body>
+</html>
