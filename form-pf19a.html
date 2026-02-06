@@ -10,7 +10,7 @@
 <body>
     <header class="main-header no-print">
         <div class="header-content">
-            <div class="logo-section">
+            <a href="main.html" class="logo-section header-link">
                 <div class="scp-logo">
                     <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
                 </div>
@@ -18,15 +18,21 @@
                     <h1>SCP Foundation</h1>
                     <p class="tagline">Secure, Contain, Protect</p>
                 </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
             </div>
         </div>
     </header>
 
     <nav class="navigation no-print">
         <ul>
-            <li><a href="main.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="forms.html">Forms</a></li>
-            <li><a href="#news">News</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
             <li><a href="#careers">Careers</a></li>
         </ul>
     </nav>
@@ -424,11 +430,26 @@
 
             <!-- Action Buttons -->
             <div class="form-actions no-print">
-                <button type="button" class="btn-primary" onclick="window.print()">PRINT / SAVE AS PDF</button>
+                <button type="button" class="btn-primary" id="submitBtn">SUBMIT APPLICATION</button>
                 <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
             </div>
         </div>
     </main>
+
+    <!-- Submission Confirmation Modal -->
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">APPLICATION SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your application has been successfully submitted to the Foundation HR Department for processing.</p>
+                <p class="foia-text" style="margin-top: 20px;">You will be contacted within 48-72 hours regarding the status of your application. A copy of your submitted application has been filed in your Personal Records.</p>
+                <p class="foia-text" style="margin-top: 20px; color: #ffaa00;">Application Reference: PF-19A-████-FL-3-7721-GL</p>
+            </div>
+            <button id="closeSubmissionModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
 
     <footer class="no-print">
         <p>SCP Foundation © Secure. Contain. Protect.</p>
@@ -443,6 +464,21 @@
         </div>
         <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
     </footer>
+    <script src="auth.js"></script>
+    <script>
+        // Submit button functionality
+        const submitBtn = document.getElementById('submitBtn');
+        const submissionModal = document.getElementById('submissionModal');
+        const closeSubmissionModal = document.getElementById('closeSubmissionModal');
+
+        submitBtn.onclick = function() {
+            submissionModal.style.display = 'flex';
+        };
+
+        closeSubmissionModal.onclick = function() {
+            submissionModal.style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
 </body>
 </html>
-
