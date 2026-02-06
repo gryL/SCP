@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form AE-44 (REV. 9) - Anomalous Exposure Self-Report</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 1 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM AE-44 (REV. 9)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>ANOMALOUS EXPOSURE SELF-REPORT</h1>
+                    <p class="doc-subtitle">MEDICAL DIVISION — FILE WITHIN 24 HOURS OF EXPOSURE</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">EXPOSURE DETAILS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="exposure-date">EXPOSURE DATE</label>
+                        <input type="date" id="exposure-date" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="exposure-time">EXPOSURE TIME</label>
+                        <input type="time" id="exposure-time" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="location">LOCATION OF EXPOSURE</label>
+                        <input type="text" id="location" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="exposure-type">TYPE OF EXPOSURE</label>
+                        <select id="exposure-type" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="visual">VISUAL (Direct observation)</option>
+                            <option value="auditory">AUDITORY (Sound/speech)</option>
+                            <option value="physical">PHYSICAL CONTACT</option>
+                            <option value="memetic">MEMETIC (Information hazard)</option>
+                            <option value="environmental">ENVIRONMENTAL (Airborne/liquid)</option>
+                            <option value="unknown">UNKNOWN/MULTIPLE</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">SYMPTOMS OBSERVED</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>PHYSICAL SYMPTOMS (CHECK ALL THAT APPLY)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="symptoms" value="headache"> HEADACHE/MIGRAINE</label>
+                            <label><input type="checkbox" name="symptoms" value="nausea"> NAUSEA/VOMITING</label>
+                            <label><input type="checkbox" name="symptoms" value="vision"> VISION CHANGES</label>
+                            <label><input type="checkbox" name="symptoms" value="skin"> SKIN IRRITATION/RASH</label>
+                            <label><input type="checkbox" name="symptoms" value="respiratory"> RESPIRATORY DIFFICULTY</label>
+                            <label><input type="checkbox" name="symptoms" value="bleeding"> UNEXPLAINED BLEEDING</label>
+                            <label><input type="checkbox" name="symptoms" value="none-physical"> NONE</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>COGNITIVE/PSYCHOLOGICAL SYMPTOMS (CHECK ALL THAT APPLY)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="psych-symptoms" value="memory"> MEMORY LOSS/GAPS</label>
+                            <label><input type="checkbox" name="psych-symptoms" value="confusion"> CONFUSION/DISORIENTATION</label>
+                            <label><input type="checkbox" name="psych-symptoms" value="hallucinations"> HALLUCINATIONS</label>
+                            <label><input type="checkbox" name="psych-symptoms" value="compulsion"> INTRUSIVE THOUGHTS/COMPULSIONS</label>
+                            <label><input type="checkbox" name="psych-symptoms" value="anxiety"> EXTREME ANXIETY/PANIC</label>
+                            <label><input type="checkbox" name="psych-symptoms" value="none-psych"> NONE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">DETAILED DESCRIPTION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="description">DESCRIBE THE EXPOSURE EVENT IN DETAIL</label>
+                        <textarea id="description" rows="8" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>WITNESSED BY OTHER PERSONNEL?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="witnessed" value="yes"> YES</label>
+                            <label><input type="radio" name="witnessed" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">IMMEDIATE ACTIONS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>DECONTAMINATION PROTOCOL FOLLOWED?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="decon" value="yes"> YES</label>
+                            <label><input type="radio" name="decon" value="no"> NO</label>
+                            <label><input type="radio" name="decon" value="partial"> PARTIAL</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>IMMEDIATE MEDICAL ATTENTION SOUGHT?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="medical" value="yes"> YES</label>
+                            <label><input type="radio" name="medical" value="no"> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" id="submitAE">SUBMIT REPORT</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">EXPOSURE REPORT SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your exposure report has been submitted to Medical Division. Report to Site Medical immediately for evaluation.</p>
+                <p class="foia-text" style="margin-top: 20px; color: #ff4444;">DO NOT leave the facility until cleared by medical personnel.</p>
+                <p class="foia-text" style="margin-top: 20px;">Report Reference: AE-44-████-<span id="reportRef"></span></p>
+            </div>
+            <button id="closeModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script>
+        document.getElementById('submitAE').onclick = function() {
+            const refNum = Date.now().toString().slice(-6);
+            document.getElementById('reportRef').textContent = refNum;
+            document.getElementById('submissionModal').style.display = 'flex';
+        };
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('submissionModal').style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
+</body>
+</html>
