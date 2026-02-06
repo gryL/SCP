@@ -54,8 +54,24 @@
                     <p class="doc-subtitle">BASELINE COGNITIVE ASSESSMENT — COMPLETED</p>
                 </div>
                 <div class="stamp-area">
-                    <div class="stamp received-stamp">CLEARED</div>
-                    <div class="stamp processing-stamp">FILED</div>
+                    <div class="circular-stamp cleared-stamp">
+                        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="75" cy="75" r="70" fill="none" stroke="#00ff00" stroke-width="4"/>
+                            <circle cx="75" cy="75" r="55" fill="none" stroke="#00ff00" stroke-width="2"/>
+                            <text x="75" y="80" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#00ff00" text-anchor="middle" letter-spacing="2">
+                                CLEARED
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="circular-stamp filed-stamp">
+                        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="75" cy="75" r="70" fill="none" stroke="#ffaa00" stroke-width="4"/>
+                            <circle cx="75" cy="75" r="55" fill="none" stroke="#ffaa00" stroke-width="2"/>
+                            <text x="75" y="80" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#ffaa00" text-anchor="middle" letter-spacing="2">
+                                FILED
+                            </text>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -217,8 +233,8 @@
                                     </textPath>
                                 </text>
                                 
-                                <!-- "CLEARANCE" text on bottom curve -->
-                                <path id="bottomCurve" d="M 160,100 A 60,60 0 0,1 40,100" fill="none"/>
+                                <!-- "CLEARANCE" text on bottom curve (reversed path) -->
+                                <path id="bottomCurve" d="M 40,100 A 60,60 0 0,0 160,100" fill="none"/>
                                 <text font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#00ff00" letter-spacing="3">
                                     <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
                                         CLEARANCE
