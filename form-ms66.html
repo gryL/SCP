@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form MS-66 (REV. 8) - Post-Mission Medical Screening</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 1 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM MS-66 (REV. 8)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>POST-MISSION MEDICAL SCREENING</h1>
+                    <p class="doc-subtitle">ENSURE YOU DIDN'T BRING ANYTHING UNKNOWN BACK</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">MISSION INFORMATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="mission-id">MISSION / ASSIGNMENT ID</label>
+                        <input type="text" id="mission-id" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="mission-date">MISSION DATE</label>
+                        <input type="date" id="mission-date" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="duration">MISSION DURATION</label>
+                        <input type="text" id="duration" placeholder="e.g., 4 hours, 2 days">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">PHYSICAL SYMPTOMS CHECK</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>HAVE YOU EXPERIENCED ANY OF THE FOLLOWING? (CHECK ALL THAT APPLY)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="symptoms" value="unexplained-marks"> UNEXPLAINED MARKS OR BRUISES</label>
+                            <label><input type="checkbox" name="symptoms" value="skin-changes"> UNUSUAL SKIN CHANGES OR RASHES</label>
+                            <label><input type="checkbox" name="symptoms" value="weight-change"> SUDDEN WEIGHT GAIN OR LOSS</label>
+                            <label><input type="checkbox" name="symptoms" value="temperature"> ABNORMAL BODY TEMPERATURE</label>
+                            <label><input type="checkbox" name="symptoms" value="foreign-objects"> FOREIGN OBJECTS ON/IN BODY</label>
+                            <label><input type="checkbox" name="symptoms" value="bleeding"> UNEXPLAINED BLEEDING</label>
+                            <label><input type="checkbox" name="symptoms" value="none-physical"> NONE OF THE ABOVE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">COGNITIVE/BEHAVIORAL CHECK</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>HAVE YOU NOTICED ANY OF THE FOLLOWING? (CHECK ALL THAT APPLY)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="cognitive" value="time-loss"> MISSING TIME OR MEMORY GAPS</label>
+                            <label><input type="checkbox" name="cognitive" value="new-knowledge"> UNEXPLAINED NEW KNOWLEDGE OR SKILLS</label>
+                            <label><input type="checkbox" name="cognitive" value="language"> SPEAKING IN UNKNOWN LANGUAGES</label>
+                            <label><input type="checkbox" name="cognitive" value="compulsions"> NEW COMPULSIONS OR URGES</label>
+                            <label><input type="checkbox" name="cognitive" value="aversion"> SUDDEN AVERSIONS (light, sound, touch, etc.)</label>
+                            <label><input type="checkbox" name="cognitive" value="dreams"> RECURRING UNUSUAL DREAMS</label>
+                            <label><input type="checkbox" name="cognitive" value="none-cognitive"> NONE OF THE ABOVE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">CONTAMINATION SCREENING</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>DID YOU COME INTO CONTACT WITH ANY OF THE FOLLOWING?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contact" value="unknown-substance"> UNKNOWN SUBSTANCES OR LIQUIDS</label>
+                            <label><input type="checkbox" name="contact" value="biological"> BIOLOGICAL MATERIALS</label>
+                            <label><input type="checkbox" name="contact" value="anomalous-object"> ANOMALOUS OBJECTS OR ENTITIES</label>
+                            <label><input type="checkbox" name="contact" value="radiation"> POSSIBLE RADIATION EXPOSURE</label>
+                            <label><input type="checkbox" name="contact" value="memetic"> MEMETIC OR COGNITOHAZARD MATERIAL</label>
+                            <label><input type="checkbox" name="contact" value="none-contact"> NONE OF THE ABOVE</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>WERE STANDARD DECONTAMINATION PROCEDURES FOLLOWED?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="decon" value="yes" required> YES</label>
+                            <label><input type="radio" name="decon" value="partial" required> PARTIAL</label>
+                            <label><input type="radio" name="decon" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">PERSONNEL ITEMS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>ARE YOU BRINGING BACK ANY ITEMS NOT ISSUED TO YOU?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="items" value="yes" required> YES</label>
+                            <label><input type="radio" name="items" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" id="items-details-row" style="display: none;">
+                    <div class="form-field full-width">
+                        <label for="items-description">DESCRIBE ITEMS</label>
+                        <textarea id="items-description" rows="4" placeholder="List all non-issued items being brought back"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 6</span>
+                    <span class="section-title">ADDITIONAL NOTES</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="notes">ANYTHING UNUSUAL TO REPORT?</label>
+                        <textarea id="notes" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" id="submitMS">SUBMIT SCREENING</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">SCREENING SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your post-mission medical screening has been submitted to Medical Division.</p>
+                <p class="foia-text" style="margin-top: 20px;" id="clearanceMessage">Based on your responses, you are CLEARED for standard duty. Report any delayed symptoms immediately.</p>
+                <p class="foia-text" style="margin-top: 20px;">Screening Reference: MS-66-████-<span id="reportRef"></span></p>
+            </div>
+            <button id="closeModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script>
+        // Show items details if YES
+        document.querySelectorAll('input[name="items"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const detailsRow = document.getElementById('items-details-row');
+                if (this.value === 'yes') {
+                    detailsRow.style.display = 'flex';
+                } else {
+                    detailsRow.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('submitMS').onclick = function() {
+            const refNum = Date.now().toString().slice(-6);
+            document.getElementById('reportRef').textContent = refNum;
+            
+            // Check if any concerning boxes were checked
+            const symptoms = document.querySelectorAll('input[type="checkbox"]:checked');
+            let flagged = false;
+            symptoms.forEach(cb => {
+                if (cb.value !== 'none-physical' && cb.value !== 'none-cognitive' && cb.value !== 'none-contact') {
+                    flagged = true;
+                }
+            });
+            
+            const clearanceMsg = document.getElementById('clearanceMessage');
+            if (flagged) {
+                clearanceMsg.innerHTML = '<span style="color: #ff4444;">HOLD FOR MEDICAL EVALUATION. Report to Medical immediately. Do not leave the facility.</span>';
+            }
+            
+            document.getElementById('submissionModal').style.display = 'flex';
+        };
+        
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('submissionModal').style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
+</body>
+</html>
