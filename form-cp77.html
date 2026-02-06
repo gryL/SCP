@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form CP-77 (REV. 11) - Containment Protocol Compliance</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">CLEARANCE VARIES BY ASSIGNMENT</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM CP-77 (REV. 11)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>CONTAINMENT PROTOCOL COMPLIANCE ACKNOWLEDGEMENT</h1>
+                    <p class="doc-subtitle">MANDATORY PRE-ASSIGNMENT CERTIFICATION</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">ASSIGNMENT INFORMATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="assignment">ASSIGNMENT DESIGNATION</label>
+                        <input type="text" id="assignment" required placeholder="e.g., SCP-XXXX-ROTATION-7">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="start-date">ASSIGNMENT START DATE</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="rotation">ROTATION DURATION</label>
+                        <select id="rotation" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="8hr">8 HOURS</option>
+                            <option value="12hr">12 HOURS</option>
+                            <option value="24hr">24 HOURS</option>
+                            <option value="weekly">WEEKLY</option>
+                            <option value="permanent">PERMANENT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">CONTAINMENT PROTOCOL REVIEW</span>
+                </div>
+                <div class="protocol-box">
+                    <div class="protocol-header">PROTOCOL SUMMARY — REDACTED FOR SECURITY</div>
+                    <div class="protocol-content">
+                        <p><strong>Object Class:</strong> ████████</p>
+                        <p><strong>Special Containment Procedures:</strong></p>
+                        <p class="redacted-protocol">
+                            SCP-████ is to be contained in ████████████████████████████████.
+                            Personnel assigned to SCP-████ must ████████████████████████████████
+                            at all times. ████████████████████████████████ is strictly prohibited.
+                            In the event of ████████████████████████████████, Protocol ████-█
+                            must be initiated immediately.
+                        </p>
+                        <p><strong>Required PPE:</strong> ████████████████████████████████</p>
+                        <p><strong>Emergency Protocols:</strong> ████████████████████████████████</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>I HAVE REVIEWED THE COMPLETE CONTAINMENT PROTOCOLS</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="reviewed" value="yes" required> YES</label>
+                            <label><input type="radio" name="reviewed" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">SAFETY ACKNOWLEDGEMENTS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="ack1" required>
+                            I understand that deviation from containment protocols may result in disciplinary action, including termination and/or ████████████.
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="ack2" required>
+                            I have completed all required training for this assignment.
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="ack3" required>
+                            I understand the risks associated with this assignment and accept full responsibility.
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="ack4" required>
+                            I will report any protocol violations or anomalous behavior immediately.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">MEDICAL CLEARANCE</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>PSYCHOLOGICAL EVALUATION CURRENT?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="psych" value="yes" required> YES (Within 90 days)</label>
+                            <label><input type="radio" name="psych" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>PHYSICAL EXAMINATION CURRENT?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="physical" value="yes" required> YES (Within 90 days)</label>
+                            <label><input type="radio" name="physical" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">SUPERVISOR AUTHORIZATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="supervisor-id">AUTHORIZING SUPERVISOR ID</label>
+                        <input type="text" id="supervisor-id" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" id="submitCP">SUBMIT ACKNOWLEDGEMENT</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">ACKNOWLEDGEMENT SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your containment protocol compliance acknowledgement has been filed.</p>
+                <p class="foia-text" style="margin-top: 20px;">You are now cleared for assignment. Report to your supervisor for briefing.</p>
+                <p class="foia-text" style="margin-top: 20px;">Reference: CP-77-████-<span id="reportRef"></span></p>
+            </div>
+            <button id="closeModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script>
+        document.getElementById('submitCP').onclick = function() {
+            const refNum = Date.now().toString().slice(-6);
+            document.getElementById('reportRef').textContent = refNum;
+            document.getElementById('submissionModal').style.display = 'flex';
+        };
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('submissionModal').style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
+</body>
+</html>
