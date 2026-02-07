@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Form EQ-45 (REV. 3) - Equipment Checkout</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-content">
+            <a href="main.html" class="logo-section header-link">
+                <div class="scp-logo">
+                    <img src="SCP_Logo.jpeg" alt="SCP Foundation Logo">
+                </div>
+                <div class="header-text">
+                    <h1>SCP Foundation</h1>
+                    <p class="tagline">Secure, Contain, Protect</p>
+                </div>
+            </a>
+            <div class="user-display" id="userDisplay" style="display: none;">
+                <span class="user-label">SIGNED IN AS:</span>
+                <span class="username-display" id="usernameDisplay"></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation no-print">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="personal-records.html">Personal Records</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form-document">
+            <div class="doc-header">
+                <div class="header-top">
+                    <div class="doc-classification">
+                        <span class="classification-level">LEVEL 1 CLEARANCE REQUIRED</span>
+                    </div>
+                    <div class="doc-id">
+                        <span>FORM EQ-45 (REV. 3)</span>
+                    </div>
+                </div>
+                <div class="doc-title">
+                    <h1>EQUIPMENT CHECKOUT FORM</h1>
+                    <p class="doc-subtitle">OPERATIONAL EQUIPMENT AUTHORIZATION</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 1</span>
+                    <span class="section-title">PERSONNEL INFORMATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="personnel-id">PERSONNEL ID</label>
+                        <input type="text" id="personnel-id" name="personnel-id" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="department">DEPARTMENT / DIVISION</label>
+                        <input type="text" id="department" name="department" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="project-code">PROJECT / ASSIGNMENT CODE</label>
+                        <input type="text" id="project-code" name="project-code" required placeholder="e.g., PROJ-RF-2025-003">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 2</span>
+                    <span class="section-title">EQUIPMENT DETAILS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="equipment-id">EQUIPMENT ID / SERIAL NUMBER</label>
+                        <input type="text" id="equipment-id" name="equipment-id" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="equipment-type">EQUIPMENT TYPE</label>
+                        <select id="equipment-type" name="equipment-type" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="communications">COMMUNICATIONS EQUIPMENT</option>
+                            <option value="measurement">MEASUREMENT/DIAGNOSTIC TOOLS</option>
+                            <option value="protective">PROTECTIVE GEAR</option>
+                            <option value="containment">CONTAINMENT APPARATUS</option>
+                            <option value="surveillance">SURVEILLANCE EQUIPMENT</option>
+                            <option value="laboratory">LABORATORY EQUIPMENT</option>
+                            <option value="other">OTHER</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="equipment-description">EQUIPMENT DESCRIPTION</label>
+                        <input type="text" id="equipment-description" name="equipment-description" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="calibration-status">CALIBRATION STATUS</label>
+                        <select id="calibration-status" name="calibration-status" required disabled>
+                            <option value="current">CURRENT (Within 30 days)</option>
+                            <option value="due-soon">DUE SOON (30-60 days)</option>
+                            <option value="overdue">OVERDUE (>60 days)</option>
+                            <option value="not-required">NOT REQUIRED</option>
+                        </select>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="last-calibration">LAST CALIBRATION DATE</label>
+                        <input type="date" id="last-calibration" name="last-calibration" disabled value="2025-01-15">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 3</span>
+                    <span class="section-title">CHECKOUT DETAILS</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label for="checkout-date">CHECKOUT DATE</label>
+                        <input type="date" id="checkout-date" name="checkout-date" required>
+                    </div>
+                    <div class="form-field half-width">
+                        <label for="expected-return">EXPECTED RETURN DATE</label>
+                        <input type="date" id="expected-return" name="expected-return" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="usage-purpose">INTENDED USE / PURPOSE</label>
+                        <textarea id="usage-purpose" name="usage-purpose" rows="3" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 4</span>
+                    <span class="section-title">EQUIPMENT CONDITION ASSESSMENT</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="condition">EQUIPMENT CONDITION AT CHECKOUT</label>
+                        <select id="condition" name="condition" required>
+                            <option value="">-- SELECT --</option>
+                            <option value="excellent">EXCELLENT</option>
+                            <option value="good">GOOD</option>
+                            <option value="fair">FAIR</option>
+                            <option value="poor">POOR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label>HAS THIS ITEM EXPERIENCED ANY UNEXPECTED BEHAVIOR?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="unexpected-behavior" value="yes" required> YES</label>
+                            <label><input type="radio" name="unexpected-behavior" value="no" required> NO</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" id="behavior-details-row" style="display: none;">
+                    <div class="form-field full-width">
+                        <label for="behavior-details">DESCRIBE UNEXPECTED BEHAVIOR</label>
+                        <textarea id="behavior-details" name="behavior-details" rows="4" placeholder="Detail any anomalous readings, malfunctions, or unusual operational characteristics"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="damage-notes">EXISTING DAMAGE OR NOTES</label>
+                        <textarea id="damage-notes" name="damage-notes" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">SECTION 5</span>
+                    <span class="section-title">AUTHORIZATION</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-field full-width">
+                        <label for="supervisor-id">AUTHORIZING SUPERVISOR ID</label>
+                        <input type="text" id="supervisor-id" name="supervisor-id" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions no-print">
+                <button type="button" class="btn-primary" id="submitCheckout">SUBMIT REQUEST</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='forms.html'">RETURN TO FORMS</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-warning-text">EQUIPMENT CHECKOUT SUBMITTED</p>
+            </div>
+            <div class="modal-body">
+                <p class="foia-text">Your equipment checkout request has been submitted to Equipment Management.</p>
+                <p class="foia-text" style="margin-top: 20px;">Checkout Reference: EQ-45-████-<span id="reportRef"></span></p>
+                <p class="foia-text" style="margin-top: 20px;">Equipment must be returned by the specified date or an extension request must be filed.</p>
+            </div>
+            <button id="closeModal" class="acknowledge-btn">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <footer class="no-print">
+        <p>SCP Foundation © Secure. Contain. Protect.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Act</a>
+            <span class="separator">|</span>
+            <a href="#no-fear">No Fear Act</a>
+            <span class="separator">|</span>
+            <a href="#accessibility">Accessibility</a>
+            <span class="separator">|</span>
+            <a href="#compliance">SCP Compliance Notices</a>
+        </div>
+        <p class="disclaimer">This is a fan-made website inspired by the SCP Foundation collaborative writing project.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script>
+        // Show/hide unexpected behavior details
+        document.querySelectorAll('input[name="unexpected-behavior"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const detailsRow = document.getElementById('behavior-details-row');
+                if (this.value === 'yes') {
+                    detailsRow.style.display = 'flex';
+                } else {
+                    detailsRow.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('submitCheckout').onclick = function() {
+            const refNum = Date.now().toString().slice(-6);
+            document.getElementById('reportRef').textContent = refNum;
+            document.getElementById('submissionModal').style.display = 'flex';
+        };
+        
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('submissionModal').style.display = 'none';
+            window.location.href = 'forms.html';
+        };
+    </script>
+</body>
+</html>
