@@ -809,14 +809,16 @@
 
 .approval-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
+    justify-content: flex-start;
 }
 
 .approval-signature {
-    width: 100%;
-    text-align: center;
+    flex: 1;
+    text-align: left;
+    transform: rotate(-3deg);
 }
 
 .signature-line {
@@ -828,9 +830,11 @@
 
 .signature-text {
     font-family: 'Brush Script MT', cursive, 'Courier New', monospace;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #0099ff;
     font-style: italic;
+    display: block;
+    margin: 10px 0;
 }
 
 .signature-date {
@@ -867,4 +871,14 @@
     .approval-block {
         min-width: 100%;
     }
+    
+    .approval-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .approval-signature {
+        text-align: center;
+    }
 }
+
